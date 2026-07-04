@@ -48,13 +48,13 @@ export default async function LoreDetailPage({ params }: { params: Promise<{ slu
                         />
                         <div
                             className="h-1 w-full mt-6 rounded-full opacity-50"
-                            style={{ backgroundColor: entry.themeColor }}
+                            style={{ backgroundColor: entry.themeColor || undefined }}
                         ></div>
                     </div>
                 )}
 
                 <div className="flex-grow">
-                    <h1 className="text-4xl md:text-6xl font-extrabold mb-8" style={{ color: entry.themeColor }}>
+                    <h1 className="text-4xl md:text-6xl font-extrabold mb-8" style={{ color: entry.themeColor || undefined }}>
                         {entry.title}
                     </h1>
 

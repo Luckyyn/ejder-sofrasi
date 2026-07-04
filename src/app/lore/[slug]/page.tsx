@@ -87,20 +87,20 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                                                         src={entry.imageUrl}
                                                         alt={entry.title}
                                                         className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 shadow-xl transition-transform duration-500 group-hover:scale-105"
-                                                        style={{ borderColor: entry.themeColor }}
+                                                        style={{ borderColor: entry.themeColor || undefined }}
                                                     />
                                                 </div>
                                             )}
 
                                             <div className="z-10 flex flex-col flex-grow items-center w-full">
-                                                <h3 className="text-2xl font-bold mb-3 transition-colors" style={{ color: entry.themeColor }}>
+                                                <h3 className="text-2xl font-bold mb-3 transition-colors" style={{ color: entry.themeColor || undefined }}>
                                                     {entry.title}
                                                 </h3>
                                                 <div className="text-zinc-400 text-sm line-clamp-3 leading-relaxed mb-4 w-full px-2">
                                                     {entry.content}
                                                 </div>
                                                 <div className="mt-auto flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-500 group-hover:text-zinc-200 transition-colors pb-2">
-                                                    Hikayeyi Oku <span style={{ color: entry.themeColor }}>➔</span>
+                                                    Hikayeyi Oku <span style={{ color: entry.themeColor || undefined }}>➔</span>
                                                 </div>
                                             </div>
                                         </div>
