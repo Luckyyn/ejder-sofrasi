@@ -48,7 +48,7 @@ export default async function LoreDetailPage({ params }: { params: Promise<{ slu
                         />
                         <div
                             className="h-1 w-full mt-6 rounded-full opacity-50"
-                            style={{ backgroundColor: entry.themeColor }}
+                            style={{ backgroundColor: entry.themeColor || undefined }}
                         ></div>
                     </div>
                 )}
