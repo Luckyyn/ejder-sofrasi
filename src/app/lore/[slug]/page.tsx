@@ -8,6 +8,7 @@ export const dynamic = 'force-dynamic';
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
     const resolvedParams = await params;
     const slug = resolvedParams.slug;
+    const currentSlug = (await params).slug;
 
     const categoryData = await db.select().from(categories).where(eq(categories.slug, slug));
     const currentCategory = categoryData[0];
@@ -107,11 +108,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                                     </Link>
                                 ))}
                             </div>
-                            {params.slug === 'karakterler' && (
+                            {currentSlug === 'karakterler' && (
                                 <div className="mt-16 mb-8 text-center">
                                     <p className="text-sm text-gray-400 italic">
-                                        ✨ İto İtoğlu, Kalender Tütüncüoğlu, Akmer Sütçüoğlu ve Roary karakterlerine ait çizimler{' '}
-                                        <span className="font-semibold text-red-400">@einyachi</span> tarafından yapılmıştır.
+                                        ✨ İto İtoğlu, Kalender Tütüncüoğlu, Akmer Sütçüoğlu ve Roary karakterlerine ait çizimler <span className="font-semibold text-red-400">@einyachi</span> tarafından yapılmıştır.
                                     </p>
                                 </div>
                             )}
