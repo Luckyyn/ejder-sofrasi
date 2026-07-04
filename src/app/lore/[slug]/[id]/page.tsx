@@ -54,7 +54,7 @@ export default async function LoreDetailPage({ params }: { params: Promise<{ slu
                 )}
 
                 <div className="flex-grow">
-                    <h1 className="text-4xl md:text-6xl font-extrabold mb-8" style={{ color: entry.themeColor }}>
+                    <h1 className="text-4xl md:text-6xl font-extrabold mb-8" style={{ color: entry.themeColor || undefined }}>
                         {entry.title}
                     </h1>
 
