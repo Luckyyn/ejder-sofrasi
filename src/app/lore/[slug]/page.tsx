@@ -107,6 +107,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                                     </Link>
                                 ))}
                             </div>
+                            {params.slug === 'karakterler' && (
+                                <div className="mt-16 mb-8 text-center">
+                                    <p className="text-sm text-gray-400 italic">
+                                        ✨ İto İtoğlu, Kalender Tütüncüoğlu, Akmer Sütçüoğlu ve Roary karakterlerine ait çizimler{' '}
+                                        <span className="font-semibold text-red-400">@einyachi</span> tarafından yapılmıştır.
+                                    </p>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
