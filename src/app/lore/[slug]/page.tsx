@@ -78,7 +78,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                                         >
                                             <div
                                                 className="absolute -inset-10 opacity-0 group-hover:opacity-10 blur-3xl transition-opacity duration-700"
-                                                style={{ backgroundColor: entry.themeColor }}
+                                                style={{ backgroundColor: entry.themeColor || 'transparent' }}
                                             ></div>
 
                                             {entry.imageUrl && (
